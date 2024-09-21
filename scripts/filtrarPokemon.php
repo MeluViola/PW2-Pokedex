@@ -1,0 +1,2 @@
+<?php
+// Se necesita login
