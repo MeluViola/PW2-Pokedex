@@ -6,6 +6,18 @@ $usuario = isset($_SESSION['username']) ? $_SESSION['username'] : null;
 ?>
 
 
+<!-- Formulario de login -->
+<form method="POST" action="scripts/procesarLogin.php">
+    <label for="correo">Correo:</label>
+    <input type="text" name="correo" required>
+
+    <label for="contraseña">Contraseña:</label>
+    <input type="password" name="contraseña" required>
+
+    <button type="submit">Iniciar sesión</button>
+</form>
+
+
 <?php
 $tipos = [
     1 => "Agua", 2 => "Fuego", 3 => "Planta", 4 => "Acero", 5 => "Volador",
