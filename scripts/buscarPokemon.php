@@ -1,5 +1,4 @@
 <?php
-
 global $conexion;
 include("database.php");
 
