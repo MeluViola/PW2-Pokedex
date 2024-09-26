@@ -3,9 +3,8 @@ global $conexion;
 session_start();
 $usuario = isset($_SESSION['username']) ? $_SESSION['username'] : null;
 
-// HTML
-
-// HEADER
+require_once 'includes/header.php';
+require_once 'includes/search-bar.php';
 
 // Carga la configuración de conexión a la base de datos
 $configFilePath = __DIR__ . '/config.ini';
@@ -29,17 +28,6 @@ if (file_exists($configFilePath)) {
 $conexion = mysqli_connect($servername, $user, $pass, $db);
 
 ?>
-
-<!-- Formulario de login -->
-<form method="POST" action="scripts/procesarLogin.php">
-    <label for="correo">Correo:</label>
-    <input type="text" name="correo" required>
-
-    <label for="contraseña">Contraseña:</label>
-    <input type="password" name="contraseña" required>
-
-    <button type="submit">Iniciar sesión</button>
-</form>
 
 
 <?php
@@ -206,9 +194,12 @@ $tipos = [
     } else {
         echo "No se encontró ningun Pokémon.";
     }
+
     ?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </div>
 </div>
 </div>
+
+<?php require_once 'includes/footer.php';   ?>

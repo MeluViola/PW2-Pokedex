@@ -13,6 +13,7 @@
     <title>Pokedex</title>
     <h1 class="page-title">Pokedex</h1>
     <nav>
+        <form method="POST" action="scripts/procesarLogin.php">
         <ul>
             <li>
                 <input type="text" placeholder="Usuario" class="input-field" />
@@ -21,9 +22,10 @@
                 <input type="password" placeholder="Contraseña" class="input-field" />
             </li>
             <li>
-                <button class="login-button">Ingresar</button>
+                <button type="submit" class="login-button">Ingresar</button>
             </li>
         </ul>
+        </form>
     </nav>
 </header>
 </body>
