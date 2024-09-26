@@ -9,6 +9,12 @@ if(isset($_POST["correo"]) && isset($_POST["contraseña"])){
 
     $query = "SELECT * FROM usuarios WHERE correo = ? AND contraseña = ?";
 
+    function mensajeError($mensaje)
+    {
+        $_SESSION['error'] = $mensaje;
+        header("Location: ../index.php");
+        exit();
+    }
 
     $stmt = $conexion->prepare($query);
     $stmt->bind_param("ss", $correo,$contraseña);
