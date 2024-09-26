@@ -26,7 +26,7 @@
                             <input type="password" name="contraseña" placeholder="Contraseña" class="input-field" required />
                         </li>
                         <li>
-                            <button type="submit" class="login-button">Ingresar</button>
+                            <button type="submit" class="login-button"> Ingresar </button>
                         </li>
                     </ul>
                   </form>';
