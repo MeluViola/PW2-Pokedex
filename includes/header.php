@@ -15,8 +15,13 @@
     <nav>
         <?php
         if (isset($_SESSION['username'])) {
-            echo "<ul><li><span>ADMIN</span></li></ul>";      // Si el usuario está conectado, muestra "ADMIN"
-        } else {                                              // Si no está conectado, muestra el formulario de login
+            echo "<ul>
+                <li><span>ADMIN</span></li>
+                <li><a href='scripts/agregarPokemon.php' class='btn btn-success'>Agregar Pokémon</a></li>
+                <li><a href='scripts/procesarLogout.php' class='btn btn-danger'>Cerrar Sesión</a></li>
+              </ul>"; // Muestra el menú para el usuario logueado
+        } else {
+            // Si no está conectado, muestra el formulario de login
             echo '<form method="POST" action="/Pokedex/scripts/procesarLogin.php">  
                     <ul>
                         <li>
