@@ -59,7 +59,22 @@ $tipos = [
 <div class="container">
     <!--PRUEBA PARA BUSCAR-->
     <br>
+
     <?php
+    // Obtenemos la URL para ver si se agrego un pokemon
+    $url = "$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    $partes = parse_url($url);
+
+    if(isset($partes['query'])) {
+        parse_str($partes['query'], $query);
+
+        // Si la URL dice "agregado", entonces venimos de agregar un pokemons y mostramos un mensaje
+        if(isset($query['agregado'])) {
+            echo "<p style='font-size: 50px'>¡Pokémon añadido correctamente!</p>";
+        }
+    }
+
+
     if(isset($usuario)) {
         echo "<h2 style='font-size: 40px'>¡Bienvenido, $usuario!</h2>";
     } else {

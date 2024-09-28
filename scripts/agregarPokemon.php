@@ -8,27 +8,35 @@ if(!isset($_SESSION["username"])){
     exit;
 }
 
+
+$tipos = [
+    "agua"=>1 , "fuego" => 2, "planta"=>3, "acero" =>4, "volador"=>5,
+    "hielo"=>6, "bicho"=>7, "electrico"=>8, "normal"=>9,
+    "roca" =>10, "tierra"=>11, "lucha" =>12, "hada" =>13,
+    "psiquico"=>14, "veneno"=>15, "dragon"=>16, "fantasma"=>17,
+    "siniestro" =>18
+];
+
 if($_SERVER["REQUEST_METHOD"] == "POST"){
+
     $id = $_POST['identificador'];
     $nombre = $_POST["nombre"];
-    $tipo_id = $_POST["tipo"];
+    $tipo_id = $tipos[$_POST["tipo"]];
     $descripcion = $_POST["descripcion"];
+    $altura = $_POST["altura"];
+    $peso = $_POST["peso"];
 
-    $imagen = $_FILES['img'];
-    $ruta_imagen = 'imagen' . basename($imagen['name']);
-    move_uploaded_file($imagen['tmp_name'], $ruta_imagen);
+    $imagen_data = file_get_contents($_FILES["img"]["tmp_name"]);
 
     $stmt = $conexion->prepare("INSERT INTO pokemon (id, nombre, descripcion, imagen, altura, peso, tipo_id) VALUES (?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param('issddii', $id, $nombre, $descripcion, $ruta_imagen, $altura, $peso, $tipo_id);
+    $stmt->bind_param('isssdii', $id, $nombre, $descripcion, $imagen_data, $altura, $peso, $tipo_id);
     if ($stmt->execute()) {
         // Redirigir a la página de búsqueda después de agregar
-        header("Location: buscarPokemon.php?mensaje=Pokémon añadido correctamente");
+        header("Location: ../index.php?agregado");
         exit();
     } else {
         echo "Error al agregar Pokémon: " . $stmt->error;
     }
-} else {
-    echo "Error al cargar la imagen.";
 }
 ?>
 
@@ -84,8 +92,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 </div>
 
                 <div class="mb-3 col-sm-6 col-lg-6">
+                    <label for="altura" class="form-label">Altura</label>
+                    <input type="text" required class="form-control" id="altura"
+                           placeholder="Ingrese la altura de su pokemon" name="altura">
+                </div>
+
+                <div class="mb-3 col-sm-6 col-lg-6">
+                    <label for="peso" class="form-label">Peso</label>
+                    <input type="text" required class="form-control" id="peso"
+                           placeholder="Ingrese el peso de su pokemon" name="peso">
+                </div>
+
+                <div class="mb-3 col-sm-6 col-lg-6">
                     <label for="formFile" class="form-label">Foto de Pokemon</label>
-                    <input class="form-control" type="file" id="formFile" name="img" required>
+                    <input class="form-control" type="file" id="img" name="img" required>
                 </div>
 
                 <div class="mb-3 col-sm-6 col-lg-6">
@@ -99,7 +119,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                     <div class="mb-3 col-12 col-sm-4 col-lg-4 pt-3">
                         <button type="submit" class="btn btn-primary w-100">Crear</button>
-                        <a href="buscarPokemon.php" class="btn btn-danger w-100 mt-3">Cancelar</a>
+                        <a href="../index.php" class="btn btn-danger w-100 mt-3">Cancelar</a>
                     </div>
                     <img src="../assets/pikachu.gif" alt="" width="200" class="pokemonGif">
                 </div>
