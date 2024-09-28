@@ -30,7 +30,7 @@ if (file_exists($configFilePath)) {
 $conexion = mysqli_connect($servername, $user, $pass, $db);
 
 $usuario = "Entrenador/a";
-=======
+
 
 ?>
 
