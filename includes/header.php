@@ -3,27 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/estilos.css">
+    <link rel="stylesheet" href="/TP N° 2 - Pokedex/CSS/estilos.css">
 </head>
 <body>
 <header>
     <div class="logo">
-        <img src="img/pokebola.png" alt="Logo Pokébola" />
+        <img src="/TP N° 2 - Pokedex/assets/logo.png" alt="Logo Pokebola" />
     </div>
     <title>Pokedex</title>
-    <h1 class="page-title">Pokedex</h1>
+    <a href="/TP N° 2 - Pokedex/index.php"><h1 class="page-title"> Pokedex</h1></a>
     <nav>
-        <ul>
-            <li>
-                <input type="text" placeholder="Usuario" class="input-field" />
-            </li>
-            <li>
-                <input type="password" placeholder="Contraseña" class="input-field" />
-            </li>
-            <li>
-                <button class="login-button">Ingresar</button>
-            </li>
-        </ul>
+        <!-- Formulario de login -->
+        <form method="POST" action="scripts/procesarLogin.php">
+            <label for="correo">Usuario:</label>
+            <input type="text" name="usuario" required>
+
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" name="contraseña" required>
+
+            <button type="submit">Iniciar sesión</button>
+        </form>
     </nav>
 </header>
 </body>

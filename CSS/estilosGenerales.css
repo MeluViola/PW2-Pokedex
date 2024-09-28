@@ -9,37 +9,7 @@ body {
     min-height: 100vh;
 }
 
-/* Estilos para la barra de búsqueda */
-.search-bar {
-    display: flex; /* Utiliza un diseño flexible */
-    justify-content: center; /* Centra la barra de búsqueda */
-    margin: 15px 0; /* Margen superior e inferior */
-}
-
-.search-bar input {
-    padding: 15px; /* Aumenta el espaciado interno del campo de texto */
-    border: 2px solid #ccc; /* Cambia el borde a 2px para mayor grosor */
-    border-radius: 5px; /* Bordes redondeados */
-    width: 400px; /* Aumenta el ancho del campo de búsqueda */
-    font-size: 16px; /* Aumenta el tamaño de la fuente */
-}
-
-.search-bar button {
-    padding: 15px 20px; /* Aumenta el espaciado interno del botón */
-    background-color: #e32323; /* Color de fondo del botón */
-    color: #333; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar el ratón */
-    margin-left: 10px; /* Margen a la izquierda para separar del campo de texto */
-    font-size: 16px; /* Aumenta el tamaño de la fuente del botón */
-}
-
-.search-bar button:hover {
-    background-color: #c82121; /* Color del botón al pasar el ratón */
-}
-
-
+/*--------HEADER----------*/
 header {
     background-color: #e32323;
     padding: 15px 20px;
@@ -92,35 +62,8 @@ header nav ul li a {
 header nav ul li a:hover {
     color: #ffcb05;
 }
-
-.detalle-container {
-    background-color: #fff;
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.detalle-container h1 {
-    color: #39393a;
-}
-
-.pokemon-img {
-    max-width: 300px;
-    margin: 20px 0;
-}
-
-.detalle-container p {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.detalle-container strong {
-    color: #d62828;
-}
-
+/*----------------------------------*/
+/*--------FOOTER-------*/
 .footer {
     background-color: #d62828; /* Color de fondo rojo para el footer */
     color: #fff; /* Color del texto del footer */
@@ -152,4 +95,6 @@ footer p {
         max-width: 200px;
     }
 }
+
+
 

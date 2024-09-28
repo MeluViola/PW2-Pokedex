@@ -1,0 +1,25 @@
+
+.pokelogo{
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+}
+
+.navcolor{
+    background:  #c21e27;
+}
+
+.imagen-pokemon{
+    width: 10em;
+    height: auto;
+}
+
+.imagen-tipo{
+    width: 2em;
+    height: auto;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Hace un zoom al pasar el ratón */
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}

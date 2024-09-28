@@ -2,10 +2,9 @@
 global $conexion;
 session_start();
 $usuario = isset($_SESSION['username']) ? $_SESSION['username'] : null;
+include_once("includes/header.php");
+include_once("includes/search-bar.php");
 
-// HTML
-
-// HEADER
 
 // Carga la configuración de conexión a la base de datos
 $configFilePath = __DIR__ . '/config.ini';
@@ -27,30 +26,20 @@ if (file_exists($configFilePath)) {
 
 // Conectar a la base de datos
 $conexion = mysqli_connect($servername, $user, $pass, $db);
-
+$usuario = "Entrenador/a";
 ?>
 
-<!-- Formulario de login -->
-<form method="POST" action="scripts/procesarLogin.php">
-    <label for="correo">Correo:</label>
-    <input type="text" name="correo" required>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pokedex - Inicio</title>
+    <link rel="stylesheet" type="text/css" href="/TP N° 2 - Pokedex/CSS/estilosDetalles.css">
+    <link href="/TP N° 2 - Pokedex/assets/logo.png" rel="icon">
 
-    <label for="contraseña">Contraseña:</label>
-    <input type="password" name="contraseña" required>
-
-    <button type="submit">Iniciar sesión</button>
-</form>
-
-
-<?php
-$tipos = [
-    1 => "Agua", 2 => "Fuego", 3 => "Planta", 4 => "Acero", 5 => "Volador",
-    6 => "Hielo", 7 => "Bicho", 8 => "Electrico", 9 => "Normal", 10 => "Roca",
-    11 => "Tierra", 12 => "Lucha", 13 => "Hada", 14 => "Psiquico", 15 => "Veneno",
-    16 => "Dragon", 17 => "Fantasma", 18 => "Siniestro"
-];
-?>
-
+    <!--Estilos con bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
 <div class="container">
     <!--PRUEBA PARA BUSCAR-->
     <br>
@@ -62,39 +51,6 @@ $tipos = [
     }
     ?>
     <br>
-
-    <form class="form-inline mb-3" method="post" action="">
-        <h5 style="font-weight: bolder">Busqueda de Pokemones:</h5>
-        <div class="d-flex align-items-center">
-            <div class="form-group mb-2">
-                <select class="form-control" name="tipo" id="tipo">
-                    <option value="" selected>Todos</option>
-                    <?php
-                    foreach ($tipos as $numeroReferencia => $tipo) {
-                        echo '<option value="' . $numeroReferencia . '">' . ucfirst($tipo) . '</option>';
-                    }
-                    ?>
-                </select>
-            </div>
-
-            <div class="form-group mx-sm-3 mb-2"> <!-- Cambiado a mx-sm-3 para más espacio horizontal -->
-                <input type="text" class="busqueda" name="nombre" id="nombre" placeholder="Ingrese ID o nombre del Pokemon">
-            </div>
-            <div class="form-group mb-2">
-                <button type="submit" class="btn btn-primary ml-2" style="margin-left: 10px">Filtrar</button>
-            </div>
-
-            <div class="form-group mb-2"> <!-- Añadido un contenedor form-group para el botón Nuevo Pokémon -->
-                <?php
-                if (isset($_SESSION['roleID']) && $_SESSION['roleID'] === 1) {
-                    echo '<button class="btn btn-danger pokemon-nuevo-btn" type="button" data-bs-toggle="modal" data-bs-target="#nuevoPokemonModal">Nuevo Pokemon<i class="bi bi-plus" style="margin-left: 5px"></i></button>';
-                }
-                ?>
-            </div>
-
-        </div>
-
-    </form>
     <!------------------------------PRUEBA DE ACCESOS A BDD-->
     <?php
 
@@ -161,7 +117,7 @@ $tipos = [
             echo '<div class="card text-center">';
             echo '<div class="card-body">';
             echo '<h5 class="card-title" style="font-weight: bolder">' . $row["nombre"] . '</h5>';
-            echo "<a href=\"scripts/detalle.php?unique_id={$row['unique_id']}\"><img src=\"data:image/jpeg;base64," . base64_encode($row["imagen"]) . "\" class=\"imagen-pokemon mx-auto\" alt=\"" . $row["nombre"] . "\"></a>";
+            echo "<a href=\"scripts/detallePokemon.php?unique_id={$row['unique_id']}\"><img src=\"data:image/jpeg;base64," . base64_encode($row["imagen"]) . "\" class=\"imagen-pokemon mx-auto\" alt=\"" . $row["nombre"] . "\"></a>";
             echo '<p class="card-text">Nro: ' . $row["id"] . '</p>';
 
             if (!empty($row["tipo2_id"])) {
@@ -208,7 +164,8 @@ $tipos = [
     }
     ?>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </div>
 </div>
 </div>
+</body>
+</html>

@@ -2,6 +2,7 @@
 global $conexion;
 include("database.php");
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $dataPokemon = $_POST["buscar"];
@@ -19,6 +20,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo("No se encontró ningun Pokemon.");
     }
+    $conexion->close();
 }
-
-$conexion->close();
