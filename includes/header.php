@@ -25,8 +25,7 @@
         } else {
             // Si no está conectado, muestra el formulario de login
 
-            echo '<form method="POST" action="/Pokedex/scripts/procesarLogin.php">  
-
+            echo '<form method="POST" action="/TP N° 2 - Pokedex/scripts/procesarLogin.php">  
                     <ul>
                         <li>
                             <input type="text" name="correo" placeholder="Usuario" class="input-field" required />
