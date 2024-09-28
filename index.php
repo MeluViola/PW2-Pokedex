@@ -2,10 +2,12 @@
 global $conexion;
 session_start();
 $usuario = isset($_SESSION['username']) ? $_SESSION['username'] : null;
+
 include_once("includes/header.php");
 include_once("includes/search-bar.php");
 ?>
 <?php
+
 // Carga la configuración de conexión a la base de datos
 $configFilePath = __DIR__ . '/config.ini';
 if (file_exists($configFilePath)) {
@@ -26,7 +28,21 @@ if (file_exists($configFilePath)) {
 
 // Conectar a la base de datos
 $conexion = mysqli_connect($servername, $user, $pass, $db);
+
 $usuario = "Entrenador/a";
+=======
+
+?>
+
+
+<?php
+$tipos = [
+    1 => "Agua", 2 => "Fuego", 3 => "Planta", 4 => "Acero", 5 => "Volador",
+    6 => "Hielo", 7 => "Bicho", 8 => "Electrico", 9 => "Normal", 10 => "Roca",
+    11 => "Tierra", 12 => "Lucha", 13 => "Hada", 14 => "Psiquico", 15 => "Veneno",
+    16 => "Dragon", 17 => "Fantasma", 18 => "Siniestro"
+];
+
 ?>
 
 <!DOCTYPE html>
@@ -162,10 +178,16 @@ $usuario = "Entrenador/a";
     } else {
         echo "No se encontró ningun Pokémon.";
     }
+
     ?>
 
 </div>
 </div>
 </div>
+<?php require_once 'includes/footer.php';   ?>
 </body>
 </html>
+=======
+
+
+

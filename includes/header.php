@@ -13,6 +13,7 @@
     <title>Pokedex</title>
     <a href="/TP N° 2 - Pokedex/index.php"><h1 class="page-title"> Pokedex</h1></a>
     <nav>
+
         <!-- Formulario de login -->
         <?php
         if (isset($_SESSION['username'])) {
@@ -23,7 +24,9 @@
               </ul>"; // Muestra el menú para el usuario logueado
         } else {
             // Si no está conectado, muestra el formulario de login
-            echo '<form method="POST" action="/TP N° 2 - Pokedex/scripts/procesarLogin.php">  
+
+            echo '<form method="POST" action="/Pokedex/scripts/procesarLogin.php">  
+
                     <ul>
                         <li>
                             <input type="text" name="correo" placeholder="Usuario" class="input-field" required />

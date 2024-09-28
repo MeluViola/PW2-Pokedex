@@ -9,7 +9,6 @@ if(isset($_POST["correo"]) && isset($_POST["contraseña"])){
 
     $query = "SELECT * FROM usuarios WHERE correo = ? AND contraseña = ?";
 
-
     $stmt = $conexion->prepare($query);
     $stmt->bind_param("ss", $correo,$contraseña);
     $stmt->execute();
@@ -19,6 +18,7 @@ if(isset($_POST["correo"]) && isset($_POST["contraseña"])){
     if ($resultado->num_rows > 0) {
         session_start();
         $fila = $resultado->fetch_assoc();
+
         $_SESSION["usuario"] = $fila["id"];
         header("location: buscarPokemon.php");
 
