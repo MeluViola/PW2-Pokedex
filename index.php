@@ -4,8 +4,8 @@ session_start();
 $usuario = isset($_SESSION['username']) ? $_SESSION['username'] : null;
 include_once("includes/header.php");
 include_once("includes/search-bar.php");
-
-
+?>
+<?php
 // Carga la configuración de conexión a la base de datos
 $configFilePath = __DIR__ . '/config.ini';
 if (file_exists($configFilePath)) {

@@ -14,15 +14,30 @@
     <a href="/TP N° 2 - Pokedex/index.php"><h1 class="page-title"> Pokedex</h1></a>
     <nav>
         <!-- Formulario de login -->
-        <form method="POST" action="scripts/procesarLogin.php">
-            <label for="correo">Usuario:</label>
-            <input type="text" name="usuario" required>
-
-            <label for="contraseña">Contraseña:</label>
-            <input type="password" name="contraseña" required>
-
-            <button type="submit">Iniciar sesión</button>
-        </form>
+        <?php
+        if (isset($_SESSION['username'])) {
+            echo "<ul>
+                <li><span>ADMIN</span></li>
+                <li><a href='scripts/agregarPokemon.php' class='btn btn-success'>Agregar Pokémon</a></li>
+                <li><a href='scripts/procesarLogout.php' class='btn btn-danger'>Cerrar Sesión</a></li>
+              </ul>"; // Muestra el menú para el usuario logueado
+        } else {
+            // Si no está conectado, muestra el formulario de login
+            echo '<form method="POST" action="/TP N° 2 - Pokedex/scripts/procesarLogin.php">  
+                    <ul>
+                        <li>
+                            <input type="text" name="correo" placeholder="Usuario" class="input-field" required />
+                        </li>
+                        <li>
+                            <input type="password" name="contraseña" placeholder="Contraseña" class="input-field" required />
+                        </li>
+                        <li>
+                            <button type="submit" class="login-button"> Ingresar </button>
+                        </li>
+                    </ul>
+                  </form>';
+        }
+        ?>
     </nav>
 </header>
 </body>
