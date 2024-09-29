@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="639a95c9-de95-4937-86c8-4a765d310bd2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CSS/estilos.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Includes/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Includes/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Includes/search-bar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/imagenes/bulbasaur.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/imagenes/pokebola.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/detallePokemon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,28 +19,29 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\Program Files\PHP\php.exe" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2mUChO4lkY1RLXCXFQmmTxZ42tc" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;nahue&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nahue\OneDrive\Documentos\GitHub\PW2-Pokedex" />
       <recent name="C:\Users\nahue\OneDrive\Documentos\GitHub\PW2-Pokedex\scripts" />
       <recent name="C:\Users\nahue\OneDrive\Documentos\GitHub\PW2-Pokedex\Includes" />
       <recent name="C:\Users\nahue\OneDrive\Documentos\GitHub\PW2-Pokedex\Resources\imagenes" />
@@ -66,7 +64,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1727121885265</updated>
-      <workItem from="1727121886445" duration="300000" />
+      <workItem from="1727121886445" duration="4094000" />
+      <workItem from="1727135749562" duration="8000" />
+      <workItem from="1727307186024" duration="403000" />
     </task>
     <servers />
   </component>
