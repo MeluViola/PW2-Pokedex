@@ -176,12 +176,11 @@ $tipos = [
             if (isset($_SESSION['roleID']) && $_SESSION['roleID'] === 1) {
                 echo '<div class="d-flex justify-content-center m-2">';
                 echo '<form class="m-1" method="post" action="scripts/editarPokemon.php?unique_id=' . $row["unique_id"] . '">';
-                echo '<button type="submit" class="btn btn-primary"><i class="bi bi-pencil"></i></button>';
+                echo '<button type="submit" class="btn btn-primary"><i class="bi bi-pencil">Editar</i></button>';
                 echo '</form>';
 
-                echo '<form class="m-1" method="post" action="./scripts/borrarPokemon.php">';
-                echo '<input type="hidden" name="unique_id" value="' . $row["unique_id"] . '">';
-                echo '<button type="submit" class="btn btn-danger"><i class="bi bi-trash"></i></button>';
+                echo '<form class="m-1" method="post" action="scripts/borrarPokemon.php?unique_id=' . $row["unique_id"] . '">';
+                echo '<button type="submit" class="btn btn-danger"><i class="bi bi-trash">Borrar</i></button>';
                 echo '</form>';
                 echo '</div>';
             }

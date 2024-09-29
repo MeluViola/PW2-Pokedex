@@ -1,13 +1,14 @@
 <?php
 global $conexion;
-include("database.php");
-
 session_start();
+
+include("database.php");
+include_once __DIR__ . '/../includes/header.php';
+
 if(!isset($_SESSION["username"])){
     header("Location: procesarLogin.php");
     exit;
 }
-
 
 $tipos = [
     "agua"=>1 , "fuego" => 2, "planta"=>3, "acero" =>4, "volador"=>5,
@@ -127,6 +128,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </form>
     </div>
 </div>
-
+<?php
+require_once __DIR__ . '/../includes/footer.php';
+?>
 </body>
 </html>
+

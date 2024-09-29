@@ -19,15 +19,12 @@ if(isset($_POST["correo"]) && isset($_POST["contraseña"])){
         session_start();
         $fila = $resultado->fetch_assoc();
 
-        $_SESSION["usuario"] = $fila["id"];
-        header("location: buscarPokemon.php");
-
         $_SESSION["username"] = $fila["id"];
-        header("Location: ../index.php");
-        exit();
-    } else {
-        echo("Credenciales incorrectas");
+        $_SESSION["roleID"] = $fila["roleID"];
     }
+
+    header("Location: ../index.php");
+    exit();
 }
 
 $conexion->close();

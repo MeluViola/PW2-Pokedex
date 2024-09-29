@@ -35,16 +35,18 @@ $tipos = [
         <div class="form-group mb-2">
             <button type="submit" class="btn btn-primary ml-2" style="margin-left: 10px"> ¿Quién es ese pokemon?</button>
         </div>
-
         <div class="form-group mb-2"> <!-- Añadido un contenedor form-group para el botón Nuevo Pokémon -->
             <?php
             if (isset($_SESSION['roleID']) && $_SESSION['roleID'] === 1) {
-                echo '<button class="btn btn-danger pokemon-nuevo-btn" type="button" data-bs-toggle="modal" data-bs-target="#nuevoPokemonModal">Nuevo Pokemon<i class="bi bi-plus" style="margin-left: 5px"></i></button>';
+                echo '<a href="scripts/agregarPokemon.php" class="btn btn-success">Nuevo Pokemon</a>';
             }
             ?>
         </div>
-    </div>
+
+
+        </div>
 </form>
+
 </div>
 </body>
 </html>

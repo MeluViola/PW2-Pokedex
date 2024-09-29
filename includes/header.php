@@ -19,7 +19,6 @@
         if (isset($_SESSION['username'])) {
             echo "<ul>
                 <li><span>ADMIN</span></li>
-                <li><a href='scripts/agregarPokemon.php' class='btn btn-success'>Agregar Pokémon</a></li>
                 <li><a href='scripts/procesarLogout.php' class='btn btn-danger'>Cerrar Sesión</a></li>
               </ul>"; // Muestra el menú para el usuario logueado
         } else {
