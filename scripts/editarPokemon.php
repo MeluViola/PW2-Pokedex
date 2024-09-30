@@ -17,6 +17,7 @@ if (!isset($_GET['unique_id'])) {
     exit;
 }
 
+// Asigna el unique_id a la variable correspondiente desde la URL.
 $unique_id = $_GET['unique_id'];
 
 // Cargar los datos del Pokémon actual desde la base de datos
@@ -35,6 +36,7 @@ if ($result->num_rows === 0) {
 // Cargar los datos del Pokémon
 $pokemon = $result->fetch_assoc();
 
+// Tipos del Pokémon
 $tipos = [
     "agua" => 1, "fuego" => 2, "planta" => 3, "acero" => 4, "volador" => 5,
     "hielo" => 6, "bicho" => 7, "electrico" => 8, "normal" => 9,
@@ -48,11 +50,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['unique_id']) && isset($_POST['nombre']) && isset($_POST['tipo']) &&
         isset($_POST['descripcion']) && isset($_POST['altura']) && isset($_POST['peso'])) {
 
-        // Reemplazamos $id por $unique_id
-        $unique_id = $_POST['unique_id']; // Obtener unique_id del formulario
+        $unique_id = $_POST['unique_id'];
         $id = $_POST['identificador'];
         $nombre = $_POST["nombre"];
-        $tipo_id = isset($tipos[$_POST["tipo"]]) ? $tipos[$_POST["tipo"]] : null; // Validar que el tipo exista en el array
+        $tipo_id = isset($tipos[$_POST["tipo"]]) ? $tipos[$_POST["tipo"]] : null;
         $descripcion = $_POST["descripcion"];
         $altura = $_POST["altura"];
         $peso = $_POST["peso"];
@@ -66,13 +67,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 die("Error en la consulta: " . $conexion->error);
             }
 
+            // Vincula los parámetros para la consulta
             $stmt->bind_param('sissdiii', $nombre, $id, $descripcion, $imagen_data, $altura, $peso, $tipo_id, $unique_id);
         } else {
+            // Si no se ha subido una imagen, prepara la consulta sin la columna de imagen.
             $stmt = $conexion->prepare("UPDATE pokemon SET nombre=?, id=?, descripcion=?, altura=?, peso=?, tipo_id=? WHERE unique_id=?");
 
             if ($stmt === false) {
                 die("Error en la consulta: " . $conexion->error);
             }
+            // Vincula los parámetros para la consulta sin la imagen.
             $stmt->bind_param('sisdiii', $nombre, $id, $descripcion, $altura, $peso, $tipo_id, $unique_id);
         }
 
