@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/TP N° 2 - Pokedex/CSS/estilos.css">
+    <link rel="stylesheet" href="/TP N° 2 - Pokedex/CSS/estilosGenerales.css">
 </head>
 <body>
 <header>
