@@ -8,7 +8,7 @@
 <body>
 <header>
     <div class="logo">
-        <img width="70px" src="/TP N° 2 - Pokedex/assets/logo.png" alt="Logo Pokebola" />
+        <img src="/TP N° 2 - Pokedex/assets/logo.png" alt="Logo Pokebola" />
     </div>
     <title>Pokedex</title>
     <a href="/TP N° 2 - Pokedex/index.php"><h1 class="page-title"> Pokedex</h1></a>
