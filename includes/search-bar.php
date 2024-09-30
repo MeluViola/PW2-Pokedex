@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/TP N° 2 - Pokedex/CSS/estilosGenerales.css">
+    <link rel="stylesheet" href="/PW2-Pokedex/CSS/estilosGenerales.css">
 </head>
 <body>
 <?php
@@ -19,7 +19,7 @@ $tipos = [
 <form class="form-inline mb-3" method="post" action="">
 
     <div class="d-flex align-items-center">
-        <div class="form-group mb-2" style="margin-left: 250px;" >
+        <div class="form-group mb-2" >
             <select class="form-control" name="tipo" id="tipo">
                 <option value="" selected>Tipos</option>
                 <?php
@@ -39,7 +39,7 @@ $tipos = [
         <div class="form-group mb-2" style="margin-left: 30px;"> <!-- Nuevo Pokémon -->
             <?php
             if (isset($_SESSION['roleID']) && $_SESSION['roleID'] === 1) {
-                echo '<a href="scripts/agregarPokemon.php" class="btn btn-success">Nuevo Pokemon</a>';
+                echo '<a href="scripts/agregarPokemon.php" id="btn-btn-success">Nuevo Pokemon</a>';
             }
             ?>
         </div>

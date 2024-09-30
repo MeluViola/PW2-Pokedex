@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/TP N° 2 - Pokedex/CSS/estilosGenerales.css">
+    <link rel="stylesheet" href="/PW2-Pokedex/CSS/estilosGenerales.css">
 </head>
 <body>
 <header>
     <div class="logo">
-        <img src="/TP N° 2 - Pokedex/assets/logo.png" alt="Logo Pokebola" />
+        <img src="/PW2-Pokedex/assets/logo.png" alt="Logo Pokebola" />
     </div>
     <title>Pokedex</title>
-    <a href="/TP N° 2 - Pokedex/index.php"><h1 class="page-title"> Pokedex</h1></a>
+    <a href="/PW2-Pokedex/index.php"><h1 class="page-title">Pokedex</h1></a>
     <nav>
 
+        <div id="form-user">
         <!-- Formulario de login -->
         <?php
         if (isset($_SESSION['username'])) {
@@ -24,7 +25,7 @@
         } else {
             // Si no está conectado, muestra el formulario de login
 
-            echo '<form method="POST" action="/TP N° 2 - Pokedex/scripts/procesarLogin.php">  
+            echo '<form method="POST" action="/PW2-Pokedex/scripts/procesarLogin.php">  
                     <ul>
                         <li>
                             <input type="text" name="correo" placeholder="Usuario" class="input-field" required />
@@ -39,6 +40,7 @@
                   </form>';
         }
         ?>
+        </div>
     </nav>
 </header>
 </body>

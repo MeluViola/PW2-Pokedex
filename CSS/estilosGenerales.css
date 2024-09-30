@@ -8,8 +8,53 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+/* Estilos para la barra de búsqueda */
+.search-bar {
+    display: flex; /* Utiliza un diseño flexible */
+    justify-content: center; /* Centra la barra de búsqueda */
+    margin: 15px 0; /* Margen superior e inferior */
+}
+.search-bar input {
+    padding: 15px; /* Aumenta el espaciado interno del campo de texto */
+    border: 2px solid #ccc; /* Cambia el borde a 2px para mayor grosor */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 400px; /* Aumenta el ancho del campo de búsqueda */
+    font-size: 16px; /* Aumenta el tamaño de la fuente */
+}
+.search-bar button{
+    padding: 15px 20px; /* Aumenta el espaciado interno del botón */
+    background-color: #e32323; /* Color de fondo del botón */
+    color: #333; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    margin-left: 10px; /* Margen a la izquierda para separar del campo de texto */
+    font-size: 16px; /* Aumenta el tamaño de la fuente del botón */
+    font-weight: bold;
+}
 
-/*--------HEADER----------*/
+.search-bar button:hover {
+    background-color: #c82121; /* Color del botón al pasar el ratón */
+    color: white;
+}
+
+#btn-btn-success{
+    padding: 15px 20px; /* Aumenta el espaciado interno del botón */
+    background-color:  #c82121; /* Color de fondo del botón */
+    color: #333; /* Color del texto del botón */
+    border: 1px solid red; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    font-size: 16px; /* Aumenta el tamaño de la fuente del botón */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#btn-btn-success:hover{
+    background-color: #c82121;
+    color: white;
+}
+
 header {
     background-color: #e32323;
     padding: 15px 20px;
@@ -18,27 +63,25 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-
+header a{
+    text-decoration: none;
+}
 .logo {
     display: flex;
     align-items: center;
 }
-
 .logo img {
     width: 70px;
     height: auto;
     margin-right: 20px;
 }
-
 .page-title {
     color: #323030;
-    font-size: 26px;
+    font-size: 45px;
     margin: 0;
-    margin-left: 410px;
     flex-grow: 1;
     text-align: center;
 }
-
 header nav ul {
     list-style: none;
     display: flex;
@@ -46,11 +89,9 @@ header nav ul {
     margin: 0;
     padding: 0;
 }
-
 header nav ul li {
     margin: 0 15px;
 }
-
 header nav ul li a {
     text-decoration: none;
     color: #fff;
@@ -58,11 +99,25 @@ header nav ul li a {
     font-size: 18px;
     transition: color 0.3s;
 }
-
 header nav ul li a:hover {
     color: #ffcb05;
 }
+
+#form-user {
+    margin-left: -23rem;
+}
+
+.input-field{
+    margin:0;
+    padding: 0;
+}
 /*----------------------------------*/
+
+@media (min-width: 601px) and (max-width: 900px) {.search-bar {margin-left: 10rem }}
+
+/* Para pantallas pequeñas */
+@media (max-width: 600px) {.search-bar {margin-left: 0;}}
+
 /*--------FOOTER-------*/
 .footer {
     background-color: #d62828; /* Color de fondo rojo para el footer */

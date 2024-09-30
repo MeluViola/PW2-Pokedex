@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="639a95c9-de95-4937-86c8-4a765d310bd2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CSS/estilos.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Includes/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Includes/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Includes/search-bar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/imagenes/bulbasaur.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/imagenes/pokebola.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/detallePokemon.php" afterDir="false" />
-    </list>
+    <list default="true" id="639a95c9-de95-4937-86c8-4a765d310bd2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,10 +13,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\Program Files\PHP\php.exe" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MeluViola"
+  }
 }]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/MeluViola/PW2-Pokedex.git",
+    "accountId": "04a598ea-184f-4526-84af-5440c5514472"
+  }
+}]]></component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\Program Files\php-8.1.29-Win32-vs16-x64\php.exe" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2mUChO4lkY1RLXCXFQmmTxZ42tc" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -34,6 +38,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/xampp/htdocs",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -53,8 +58,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-PS-242.20224.361" />
-        <option value="bundled-php-predefined-a98d8de5180a-d6acee4cb394-com.jetbrains.php.sharedIndexes-PS-242.20224.361" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-PS-242.20224.427" />
+        <option value="bundled-php-predefined-a98d8de5180a-d6acee4cb394-com.jetbrains.php.sharedIndexes-PS-242.20224.427" />
       </set>
     </attachedChunks>
   </component>
@@ -67,6 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1727121885265</updated>
       <workItem from="1727121886445" duration="300000" />
+      <workItem from="1727729451461" duration="49000" />
     </task>
     <servers />
   </component>

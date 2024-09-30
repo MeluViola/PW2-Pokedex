@@ -49,8 +49,8 @@ $tipos = [
 <html>
 <head>
     <title>Pokedex - Inicio</title>
-    <link rel="stylesheet" type="text/css" href="/TP N° 2 - Pokedex/CSS/estilosDetalles.css">
-    <link href="/TP N° 2 - Pokedex/assets/logo.png" rel="icon">
+    <link rel="stylesheet" type="text/css" href="/PW2-Pokedex/CSS/estilosDetalles.css">
+    <link href="/PW2-Pokedex/assets/logo.png" rel="icon">
 
     <!--Estilos con bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -125,7 +125,7 @@ $tipos = [
 <div class="container">
     <div class="row">
         <?php
-    if ($result->num_rows > 0) {
+        if ($result->num_rows > 0) {
         function obtenerNombreTipo($tipo_id, $conexion) {
             // Consulta SQL para obtener el nombre del tipo
             $sql = "SELECT nombre FROM tipo_pokemon WHERE id = '$tipo_id'";
@@ -201,7 +201,6 @@ $tipos = [
 <?php require_once 'includes/footer.php';   ?>
 </body>
 </html>
-=======
 
 
 
