@@ -6,6 +6,15 @@ include_once __DIR__ . '/../includes/header.php';
 include_once __DIR__ . '/../includes/search-bar.php';
 
 
+$tipos = [
+    1 => "agua", 2 => "fuego", 3 => "planta", 4 => "acero", 5 => "volador",
+    6 => "hielo", 7 => "bicho", 8 => "electrico", 9 => "normal",
+    10 => "roca", 11 => "tierra", 12 => "lucha", 13 => "hada",
+    14 => "psiquico", 15 => "veneno", 16 => "dragon", 17 => "fantasma",
+    18 => "siniestro"
+];
+
+
 // Obtener el ID del Pokémon desde la URL o una solicitud
 $pokemonId = 1; // Puedes cambiar esto por la forma en que obtendrás el ID del Pokémon
 //lo cambie para que tome el id del pokemon que selecciono en la pagina, sino toma solo el 1ero
@@ -46,8 +55,8 @@ $stmt->close();
 <div class="main-content">
     <div class="detalle-container">
         <h1><?php echo htmlspecialchars($pokemon['nombre']); ?></h1>
-        <img src="<?php echo htmlspecialchars($pokemon['imagen']); ?>" alt="<?php echo htmlspecialchars($pokemon['nombre']); ?>" class="pokemon-img">
-        <p>Tipo: <?php echo htmlspecialchars($pokemon['tipo_id']); ?></p>
+        <img src="mostrarImagen.php?id=<?php echo htmlspecialchars($pokemon['unique_id']); ?>" alt="<?php echo htmlspecialchars($pokemon['nombre']); ?>" class="pokemon-img">
+        <p>Tipo: <?php echo htmlspecialchars($tipos[$pokemon['tipo_id']]); ?></p>
         <p>Altura: <?php echo htmlspecialchars($pokemon["altura"]. ' mts' )?></p>
         <p>Peso: <?php echo htmlspecialchars($pokemon["peso"]. ' kg')?></p>
         <p><?php echo htmlspecialchars($pokemon['descripcion']); ?></p>
